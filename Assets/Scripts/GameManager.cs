@@ -9,11 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject dolHarbang;
     public UIController UI;
 
-    public int WonPlusAmount = 100;
-    public float AutoClickIntervalTime = 5f;
-
-    public int Touched { get; private set; } = 0;
-    public int Won { get; private set; } = 0;
+    public GameData gameData;
 
     private void Awake()
     {
@@ -21,17 +17,21 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        gameData = new GameData();
     }
 
     private void Start()
     {
         dolHarbang.GetComponent<ClickDolHarbang>().DolHarbangClickEvent += AddScore;
+
+        UpdateUI();
     }
 
     public void AddScore()
     {
-        Touched++;
-        Won += WonPlusAmount;
+        gameData.Touched++;
+        gameData.Won += gameData.WonPerClick;
         UpdateUI();
     }
 

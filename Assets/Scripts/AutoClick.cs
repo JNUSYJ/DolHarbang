@@ -12,7 +12,7 @@ public class AutoClick : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(GameManager.Instance.AutoClickIntervalTime);
+            yield return new WaitForSeconds(GameManager.Instance.gameData.AutoClickIntervalTime);
             GameManager.Instance.dolHarbang.GetComponent<ClickDolHarbang>().InvokeDolHarbangClickEvent();
         }
     }
