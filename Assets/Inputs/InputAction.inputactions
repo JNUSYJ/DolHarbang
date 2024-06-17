@@ -1,0 +1,46 @@
+{
+    "name": "InputAction",
+    "maps": [
+        {
+            "name": "DolHarbang",
+            "id": "94b6e446-0de1-439f-b79a-dc6b4b42d7b3",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Value",
+                    "id": "c9614f10-f82a-4df0-8e09-6d1061f5d83f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e0409653-a8d9-487e-9eee-59f0c4ecbfb8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
