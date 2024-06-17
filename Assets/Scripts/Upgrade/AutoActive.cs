@@ -15,6 +15,7 @@ public class AutoActive : UpgradeController
     {
         if (Check())
         {
+            gameData.Won -= gameData.AutoBuyCost;
             gameData.Auto = true;
             autoClick.AutoClickActive();
             autoUpgradeBtn.SetActive(true);
