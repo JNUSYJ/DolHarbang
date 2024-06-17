@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject dolHarbang;
     public UIController UI;
+    public ParticleSystem DolHarbangParticleSystem;
 
     public GameData gameData;
 
@@ -17,6 +18,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        DolHarbangParticleSystem = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
 
         // gameData = new GameData();
     }
