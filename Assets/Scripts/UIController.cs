@@ -8,6 +8,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI auto;
     [SerializeField] private TextMeshProUGUI wonPerClickText;
     [SerializeField] private TextMeshProUGUI clickUpgradeCostText;
+    [SerializeField] private TextMeshProUGUI autoBuyCostText;
     [SerializeField] private TextMeshProUGUI autoUpgradeCostText;
 
     public void UpdateUI()
@@ -17,6 +18,16 @@ public class UIController : MonoBehaviour
         auto.text = GameManager.Instance.gameData.Auto ? "ON" : "OFF";
         wonPerClickText.text = GameManager.Instance.gameData.WonPerClick.ToString();
         clickUpgradeCostText.text = GameManager.Instance.gameData.ClickUpgradeCost.ToString();
-        autoUpgradeCostText.text = GameManager.Instance.gameData.AutoUpgradeCost.ToString();
+        if (GameManager.Instance.gameData.Auto)
+        {
+            if (GameManager.Instance.gameData.AutoUpgradeCount < GameManager.Instance.gameData.AutoUpgradeMaxCount)
+            {
+                autoUpgradeCostText.text = GameManager.Instance.gameData.AutoUpgradeCost.ToString();
+            }
+        }
+        else
+        {
+            autoBuyCostText.text = GameManager.Instance.gameData.AutoBuyCost.ToString();
+        }
     }
 }

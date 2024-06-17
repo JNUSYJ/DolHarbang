@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
 
-        gameData = new GameData();
+        // gameData = new GameData();
     }
 
     private void Start()

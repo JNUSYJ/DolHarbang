@@ -3,16 +3,19 @@ using UnityEngine;
 
 public class AutoClick : MonoBehaviour
 {
-    void Start()
+    public void AutoClickActive()
     {
-        StartCoroutine(AutoClickCoroutine());
+        if (GameManager.Instance.gameData.Auto)
+        { 
+            StartCoroutine(AutoClickCoroutine());
+        }
     }
 
     private IEnumerator AutoClickCoroutine()
     {
         while (true)
         {
-            yield return new WaitForSeconds(GameManager.Instance.gameData.AutoClickIntervalTime);
+            yield return new WaitForSeconds(GameManager.Instance.gameData.AutoIntervalTime);
             GameManager.Instance.dolHarbang.GetComponent<ClickDolHarbang>().InvokeDolHarbangClickEvent();
         }
     }

@@ -7,16 +7,24 @@ public class GameData
     [Header("Score")]
     public int Won;
     public int Touched;
-    public bool Auto;
 
     [Header("Setting")]
+    public bool Auto;
     public int WonPerClick;
-    public float AutoClickIntervalTime;
+    public int WonPerClickDelta;
+    public float AutoIntervalTime;
+    public float AutoIntervalTimeDelta;
 
     [Header("Upgrade")]
     public int ClickUpgradeCost;
+    public int ClickUpgradeCostDelta;
+    public int AutoBuyCost;
     public int AutoUpgradeCost;
+    public int AutoUpgradeCostDelta;
+    public int AutoUpgradeCount;
+    public int AutoUpgradeMaxCount;
 
+    /*
     public GameData()
     {
         Won = 0;
@@ -27,4 +35,5 @@ public class GameData
         ClickUpgradeCost = 500;
         AutoUpgradeCost = 1000;
     }
+    */
 }
