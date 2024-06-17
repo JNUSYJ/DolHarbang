@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TouchDolHarbang : MonoBehaviour
+public class ClickDolHarbang : MonoBehaviour
 {
-    public event Action ClickEvent;
+    public event Action DolHarbangClickEvent;
 
     public void OnClick(InputValue value)
     {
@@ -12,9 +12,14 @@ public class TouchDolHarbang : MonoBehaviour
         {
             if (IsDolHarbang())
             {
-                ClickEvent.Invoke();
+                InvokeDolHarbangClickEvent();
             }
         }
+    }
+
+    public void InvokeDolHarbangClickEvent()
+    {
+        DolHarbangClickEvent?.Invoke();
     }
 
     public bool IsDolHarbang()

@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -5,10 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private GameObject dolHarbang;
-    [SerializeField] private UIController UI;
+    public GameObject dolHarbang;
+    public UIController UI;
 
-    [SerializeField] private int WonPlusAmount = 100;
+    public int WonPlusAmount = 100;
+    public float AutoClickIntervalTime = 5f;
 
     public int Touched { get; private set; } = 0;
     public int Won { get; private set; } = 0;
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        dolHarbang.GetComponent<TouchDolHarbang>().ClickEvent += AddScore;
+        dolHarbang.GetComponent<ClickDolHarbang>().DolHarbangClickEvent += AddScore;
     }
 
     public void AddScore()
@@ -36,10 +38,5 @@ public class GameManager : MonoBehaviour
     public void UpdateUI()
     {
         UI.UpdateUI();
-    }
-
-    public void SetWonPlusAmount(int amount)
-    {
-        WonPlusAmount = amount;
     }
 }
