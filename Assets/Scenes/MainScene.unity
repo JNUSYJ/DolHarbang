@@ -2894,6 +2894,7 @@ GameObject:
   - component: {fileID: 1465041217}
   - component: {fileID: 1465041218}
   - component: {fileID: 1465041219}
+  - component: {fileID: 1465041221}
   m_Layer: 6
   m_Name: DolHarbang
   m_TagString: DolHarbang
@@ -3153,6 +3154,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1465041221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465041210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fc3cdac587fa443bf3fb71f72eaa23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1568893093
 GameObject:
   m_ObjectHideFlags: 0
@@ -8530,6 +8543,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1988485548}
   - component: {fileID: 1988485549}
+  - component: {fileID: 1988485550}
   m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
@@ -8604,6 +8618,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1988485550
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988485547}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3caa13960a5e35f4294a4ea702853d5d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
