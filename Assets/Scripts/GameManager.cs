@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    // 점수 및 재화 증가 메서드
     public void AddScore()
     {
         gameData.Touched++;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    // UI 새로고침 메서드
     public void UpdateUI()
     {
         UI.UpdateUI();

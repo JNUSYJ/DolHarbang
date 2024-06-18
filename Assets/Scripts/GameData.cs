@@ -5,24 +5,24 @@ using UnityEngine;
 public class GameData
 {
     [Header("Score")]
-    public int Won;
-    public int Touched;
+    public int Won;                     // 재화
+    public int Touched;                 // 클릭 횟수
 
     [Header("Setting")]
-    public bool Auto;
-    public int WonPerClick;
-    public int WonPerClickDelta;
-    public float AutoIntervalTime;
-    public float AutoIntervalTimeDelta;
+    public bool Auto;                   // 자동클릭 활성여부
+    public int WonPerClick;             // 클릭당 재화획득량
+    public int WonPerClickDelta;        // 강화 시 재화획득량 증가치
+    public float AutoIntervalTime;      // 자동클릭 대기시간
+    public float AutoIntervalTimeDelta; // 강화 시 자동클릭 대기시간 감소치(곱연산)
 
     [Header("Upgrade")]
-    public int ClickUpgradeCost;
-    public int ClickUpgradeCostDelta;
-    public int AutoBuyCost;
-    public int AutoUpgradeCost;
-    public int AutoUpgradeCostDelta;
-    public int AutoUpgradeCount;
-    public int AutoUpgradeMaxCount;
+    public int ClickUpgradeCost;        // 클릭 업그레이드 비용
+    public int ClickUpgradeCostDelta;   // 클릭 업그레이드 비용 증가치
+    public int AutoBuyCost;             // 자동클릭 활성화 비용
+    public int AutoUpgradeCost;         // 자동클릭 업그레이드 비용
+    public int AutoUpgradeCostDelta;    // 자동클릭 업그레이드 비용 증가치
+    public int AutoUpgradeCount;        // 자동클릭 업그레이드 횟수
+    public int AutoUpgradeMaxCount;     // 자동클릭 업그레이드 최대 횟수
 
     /*
     public GameData()

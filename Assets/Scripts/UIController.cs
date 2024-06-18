@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
+    // 유니티 UI (인스펙터 창에서 할당)
     [SerializeField] private TextMeshProUGUI touchedNumText;
     [SerializeField] private TextMeshProUGUI wonNumText;
     [SerializeField] private TextMeshProUGUI auto;
@@ -11,6 +12,8 @@ public class UIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI autoBuyCostText;
     [SerializeField] private TextMeshProUGUI autoUpgradeCostText;
 
+    // UI 새로고침 메서드
+    // 직접 사용하지 않고 게임매니저를 통해서 호출
     public void UpdateUI()
     {
         touchedNumText.text = GameManager.Instance.gameData.Touched.ToString();
