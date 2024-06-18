@@ -19,7 +19,7 @@ public class AutoUpgrade : UpgradeController
     {
         if (Check())
         {
-            gameData.Won -= gameData.ClickUpgradeCost;
+            gameData.Won -= gameData.AutoUpgradeCost;
             gameData.AutoIntervalTime *= gameData.AutoIntervalTimeDelta;
             gameData.AutoUpgradeCost += gameData.AutoUpgradeCostDelta;
             gameData.AutoUpgradeCount++;
